@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+input, select {
+    outline: none;
+    border: none;
+    height: 24px;
+    border-radius: 4px;
+    border: 1px solid #666666;
+    transition: all .2s;
+}
+
+select:hover {
+    border: 1px solid #0bbb14;
+    cursor: pointer;
+    background-color: #0bbb14;
+    color: white;
+}
+
+input {
+    padding-left: 4px;
+}
+
+body {
+    background-color: #f1f1f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #ffffff;
+    min-width: 600px;
+    width: 80%;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, .2);
+    border-radius: 12px;
+}
+
+h2 {
+    font-size: 2em;
+    margin: 12px;
+}
+
+.filter,
+.av_age,
+.show_columns,
+.table,
+.add_btn {
+    padding: 10px 0;
+}
+
+.show_columns {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.show_columns .row {
+    padding: 12px;
+    display: flex;
+    flex-wrap: wrap;    
+}
+
+.column {
+    display: flex;
+    padding: 8px;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+}
+
+.column label {
+    padding-left: 4px;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 12px;
+    text-align: center;
+}
+.th {
+    cursor: pointer;
+    transition: all .1s;
+}
+
+.th:hover {
+    background-color: #0f9ba5;
+}
+
+td {
+    cursor: pointer;
+    transition: all .2s;
+}
+
+td:hover {
+    background-color: #0bbb1465;
+}
+
+.button {
+    outline: none;
+    border: none;
+    background-color: #f1f1f1;
+    height:  45px;
+    padding: 12px 24px;
+    border-radius: 4px;
+    cursor: pointer;
+    border: 1px solid #363636;
+    transition: all .2s;
+}
+
+.calculate_button {
+    margin-left: 4px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button:hover {
+    background-color: rgb(22, 94, 177);
+    border: 1px solid rgb(10, 50, 97);
+    color: white;
+}
+
+.av_age {
+    display: flex;
+    align-items: center;
+}
+
+.av_age input {
+    margin-left: 12px;
+}
+
+#abm {
+    display: none;
+}
+.form_abm {
+    display: flex;
+    flex-direction: column;    
+}
+.group {
+    margin: 12px 0;
+}
+.btn_group {
+    display: flex;
+    flex-wrap: wrap;
+}
+.btn_group button {
+    margin: 2px;
+}
+
+.hidden {
+    display: none;
+}

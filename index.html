@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MPP</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="form" id="data">
+            <h2>Form datos</h2>
+            <div class="filter">
+                <label for="filtrar">Filtrar por: </label>
+                <select name="filtrar" id="filtrar">
+                    <option value="todos" selected>Todos</option>
+                    <option value="heroe">Heroe</option>
+                    <option value="villano">Villano</option>
+                </select>
+            </div>
+            <div class="av_age">
+                <label for="av_age">Calcular edad promedio: </label>
+                <input type="number" name="av_age" id="av_age" disabled>
+                <button value="calcular" class="button calculate_button" id="calculate_average">Calcular</button>
+            </div>
+            <div class="show_columns">
+                <h3>Mostrar columnas</h3>
+                <div class="row">
+                    <div class="c_id column">
+                        <input type="checkbox" checked name="id" id="p_id">
+                        <label for="p_id">ID</label>
+                    </div>
+                    <div class="c_name column">
+                        <input type="checkbox" checked name="name" id="p_name">
+                        <label for="p_name">Nombre</label>
+                    </div>
+                    <div class="c_surname column">
+                        <input type="checkbox" checked name="surname" id="p_surname">
+                        <label for="p_surname">Apellido</label>
+                    </div>
+                    <div class="c_age column">
+                        <input type="checkbox" checked name="age" id="p_age">
+                        <label for="p_age">Edad</label>
+                    </div>
+                    <div class="c_alterego column">
+                        <input type="checkbox" checked name="alterego" id="p_alterego">
+                        <label for="p_alterego">AlterEgo</label>
+                    </div>
+                    <div class="c_ciudad column">
+                        <input type="checkbox" checked name="ciudad" id="p_ciudad">
+                        <label for="p_ciudad">Ciudad</label>
+                    </div>
+                    <div class="c_publicado column">
+                        <input type="checkbox" checked name="publicado" id="p_publicado">
+                        <label for="p_publicado">Publicado</label>
+                    </div>
+                    <div class="c_enemigo column">
+                        <input type="checkbox" checked name="enemigo" id="p_enemigo">
+                        <label for="p_enemigo">Enemigo</label>
+                    </div>
+                    <div class="c_robos column">
+                        <input type="checkbox" checked name="robos" id="p_robos">
+                        <label for="p_robos">Robos</label>
+                    </div>
+                    <div class="c_asesinatos column">
+                        <input type="checkbox" checked name="asesinatos" id="p_asesinatos">
+                        <label for="p_asesinatos">Asesinatos</label>
+                    </div>
+                </div>
+            </div>
+            <div class="table">
+                <table>
+                    <thead>
+                        <tr id="filter_handler">
+                            <th class="th h_id">ID</th>
+                            <th class="th h_name">Nombre</th>
+                            <th class="th h_surname">Apellido</th>
+                            <th class="th h_age">Edad</th>
+                            <th class="th h_alterego">AlterEgo</th>
+                            <th class="th h_ciudad">Ciudad</th>
+                            <th class="th h_publicado">Publicado</th>
+                            <th class="th h_enemigo">Enemigo</th>
+                            <th class="th h_robos">Robos</th>
+                            <th class="th h_asesinatos">Asesinatos</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tr_root">
+                    </tbody>
+                </table>
+            </div>
+            <div class="add_btn" id="add_btn">
+                <button value="add" class="button">Agregar</button>
+            </div>
+        </div>
+        <div class="form_abm" id="abm">
+            <h2>Formulario ABM</h2>
+            <div class="group">
+                <label for="abm_id">ID: </label>
+                <input type="text" name="abm_id" id="abm_id">
+            </div>
+            <div class="group">
+                <label for="abm_name">Nombre: </label>
+                <input type="text" name="abm_name" id="abm_name">
+            </div>
+            <div class="group">
+                <label for="abm_surname">Apellido: </label>
+                <input type="text" name="abm_surname" id="abm_surname">
+            </div>
+            <div class="group">
+                <label for="abm_age">Edad: </label>
+                <input type="text" name="abm_age" id="abm_age">
+            </div>
+            <div class="group">
+                <label for="abm_type">Tipo: </label>
+                <select name="abm_type" id="abm_type">
+                    <option value="heroe" selected>Heroe</option>
+                    <option value="villano">Villano</option>
+                </select>
+            </div>
+            <div class="heroe">
+                <div class="group">
+                    <label for="abm_alterEgo">AlterEgo: </label>
+                    <input type="text" name="abm_alterEgo" id="abm_alterEgo">
+                    <span>*</span>
+                </div>
+                <div class="group">
+                    <label for="abm_ciudad">Ciudad: </label>
+                    <input type="text" name="abm_ciudad" id="abm_ciudad">
+                    <span>*</span>
+                </div>
+                <div class="group">
+                    <label for="abm_publicado">Publicado: </label>
+                    <input type="text" name="abm_publicado" id="abm_publicado">
+                    <span>*</span>
+                </div>
+            </div>
+            <div class="villano hidden">
+                <div class="group">
+                    <label for="abm_enemigo">Enemigo: </label>
+                    <input type="text" name="abm_enemigo" id="abm_enemigo">
+                    <span>*</span>
+                </div>
+                <div class="group">
+                    <label for="abm_robos">Robos: </label>
+                    <input type="text" name="abm_robos" id="abm_robos">
+                    <span>*</span>
+                </div>
+                <div class="group">
+                    <label for="abm_asesinatos">Asesinatos: </label>
+                    <input type="text" name="abm_asesinatos" id="abm_asesinatos">
+                    <span>*</span>
+                </div>
+            </div>
+            <div class="group btn_group">
+                <div class="add_btn" id="alta_btn">
+                    <button value="add" class="button">Alta</button>
+                </div>
+                <div class="add_btn" id="mod_btn">
+                    <button value="add" class="button">Modificar</button>
+                </div>
+                <div class="add_btn" id="del_btn">
+                    <button value="add" class="button">Eliminar</button>
+                </div>
+                <div class="add_btn" id="cancel_btn">
+                    <button value="add" class="button">Cancelar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- scripts -->
+    <script src="./js/classes/Persona.js"></script>
+    <script src="./js/classes/Heroe.js"></script>
+    <script src="./js/classes/Villano.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
